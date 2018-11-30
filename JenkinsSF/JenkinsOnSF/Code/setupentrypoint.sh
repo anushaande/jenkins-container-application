@@ -5,8 +5,8 @@ echo "isJenkinsPresent=$isJenkinsPresent"
 isAlreadyMounted=`cat /etc/mtab | grep /mnt/docker_dump/jenkins_home | wc -l`
 echo "isAlreadyMounted=$isAlreadyMounted"
 mountPoint="/mnt/docker_dump/jenkins_home"
-fileShareConnectionOptionString="[FILE_SHARE_CONNECT_OPTIONS_STRING]"
-remoteFileShareLocation="[REMOTE_FILE_SHARE_LOCATION]"
+fileShareConnectionOptionString="vers=3.0,username=usfdisfjenkinsstorage1,password=OZEGQ9xZnoylAIYk9ixIUrJx9PtPD8S5oQLFuvmL22oZMDx8fZDeuT+gAnZv/0Nnlijihf7BhG6gpYEAhDW1Gw==,dir_mode=0777,file_mode=0777,sec=ntlmssp"
+remoteFileShareLocation="//usfdisfjenkinsstorage1.file.core.windows.net/sfjenkins"
 
 if (( isJenkinsPresent == 0 && isAlreadyMounted == 0 ));then 
     echo "inside if - new set-up. Create jenkins user and mount remote storage."

@@ -13,7 +13,7 @@
     </SetupEntryPoint>
     <EntryPoint>
       <ContainerHost>
-        <ImageName>rapatchi/jenkins:latest</ImageName>
+        <ImageName>aanusha/sfjenkinswithsfctl:v1.0</ImageName>
         <Commands></Commands>
       </ContainerHost>
     </EntryPoint>
